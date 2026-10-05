@@ -4,7 +4,7 @@
 
 This is the **fully deobfuscated source** of Ashina V6. Every file was recovered from an obfuscated single-line bundle: all identifiers renamed to readable names, every function documented, and the code split into focused modules with a real build system.
 
-> **Upstream notice:** Ashina is a derivative of **BetterMint V2** (https://github.com/BotSolvers/BetterMint) by the BetterMint team, with additional ideas adapted from ChessKiller (IMTUIZZ) and ChessHv3 (Red-Eric). The original author's note is preserved verbatim at the bottom of this file. BetterMint is distributed under the **Reciprocal Public License 1.5 (RPL 1.5)** — see [`LICENSE`](LICENSE). This derivative is accordingly licensed under RPL 1.5, which requires notices, attribution, and source availability when deployed.
+> **Upstream notice:** Ashina is a derivative of **BetterMint V2** (https://github.com/BetterMint/BetterMint) by the BetterMint team, with additional ideas adapted from ChessKiller (IMTUIZZ) and ChessHv3 (Red-Eric). The original author's note is preserved verbatim at the bottom of this file. BetterMint is distributed under the **Reciprocal Public License 1.5 (RPL 1.5)** — see [`LICENSE`](LICENSE). This derivative is accordingly licensed under RPL 1.5, which requires notices, attribution, and source availability when deployed.
 
 ## Quick start
 
@@ -74,7 +74,7 @@ Runtime behavior was not re-verified in a browser during deobfuscation - test ma
 
 ## Credits
 
-- **BetterMint team** (thedemons, Webcubed, HotaVN, ProtonDev, BotSolvers) - the original BetterMint V2 this project derives from
+- **BetterMint team** (thedemons, Webcubed, HotaVN, ProtonDev, BetterMint) - the original BetterMint V2 this project derives from
 - **IMTUIZZ** (ChessKiller), **Red-Eric** (ChessHv3) - feature ideas adapted by Ashina
 - **chess.js** (Jeff Hlywa) - chess rules library
 - **Stockfish, Komodo, Torch, Maia 3** - the bundled engines
@@ -89,5 +89,5 @@ Runtime behavior was not re-verified in a browser during deobfuscation - test ma
 >
 > This is probably the final release. Enjoy
 >
-> BetterMint:  https://github.com/BotSolvers/BetterMint
+> BetterMint:  https://github.com/BetterMint/BetterMint
 > ChessHv3:    https://github.com/Red-Eric/ChessHv3
