@@ -1,0 +1,15 @@
+{
+  "name": "ashina-readable",
+  "private": true,
+  "version": "6.0.0",
+  "description": "Ashina V6 chess extension - deobfuscated, modularized source",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "minify": "node build.mjs --minify"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

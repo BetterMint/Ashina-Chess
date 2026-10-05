@@ -1,0 +1,38 @@
+.depthBarLayoutt {
+    display: grid;
+    grid-template-columns: [evaluation] var(--evalAndGutter) [pieces] var(--piecesWidth) [board] var(--boardContainerWidth) [board-controls] var(--boardControlsWidth);
+    margin: -5px 0 5px auto;
+    position: relative;
+}
+
+.depthBarLayoutt .depthBarr {
+    grid-column: board;
+    height: 5px !important;
+    width: var(--boardWidth) !important;
+    display: block;
+    margin-left: calc(var(--boardContainerWidth) - var(--boardWidth));
+    position: relative;
+    background: #111;
+}
+
+.depthBarr .depthBarProgress {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background-color: var(--theme-accent, #ff0a2f) !important;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 100ms ease;
+    box-shadow: 0 0 8px rgba(var(--theme-accent-rgb, 255, 10, 47), 0.5);
+}
+
+.disable-transition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: color 0 ease-in !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}

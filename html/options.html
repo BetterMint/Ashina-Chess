@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ASHINA</title>
+  <link rel="stylesheet" type="text/css" href="../css/options.css">
+</head>
+<body>
+
+  <div class="popup-header">
+    <div class="header-top">
+      <div class="brand">
+        <span class="brand-name">ASHINA <span id="brand-version">v6</span></span>
+      </div>
+      <button class="palette-btn discord-btn" id="btn-discord" title="Join Discord">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+        </svg>
+      </button>
+      <button class="palette-btn" id="btn-settings" title="Settings" data-i18n-title="settingsTitle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+      <button class="palette-btn" id="btn-info" title="Info" data-i18n-title="infoTitle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="8.5" stroke-width="3" stroke-linecap="round"/>
+          <line x1="12" y1="12" x2="12" y2="16"/>
+        </svg>
+      </button>
+      <button class="palette-btn" id="btn-reload-engine" title="Reload Engine (R)" data-i18n-title="reloadEngine">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+      </button>
+    </div>
+    <div class="tabs">
+      <div class="tab active" id="tab-visuals" data-i18n="tabVisuals">VISUALS</div>
+      <div class="tab" id="tab-engine" data-i18n="tabEngine">ENGINE</div>
+      <div class="tab" id="tab-coach" data-i18n="tabCoach">ANALYZE</div>
+      <div class="tab" id="tab-automove" data-i18n="tabAutoMove">AUTOMOVE</div>
+    </div>
+  </div>
+
+  <div class="popup-body">
+
+    <!-- VISUALS -->
+    <div class="page active" id="page-visuals">
+      <div class="check-grid">
+
+        <div class="check-item" id="item-option-evaluation-bar">
+          <span class="check-label" data-i18n="evalBar">EVAL BAR</span>
+          <div class="check-box" id="box-option-evaluation-bar">
+            <svg viewBox="0 0 10 10" width="10" height="10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="check-item" id="item-option-depth-bar">
+          <span class="check-label" data-i18n="depthProgress">DEPTH PROGRESS</span>
+          <div class="check-box" id="box-option-depth-bar">
+            <svg viewBox="0 0 10 10" width="10" height="10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="check-item" id="item-option-info-panel">
+          <span class="check-label" data-i18n="infoPanel">INFO PANEL</span>
+          <div class="check-box off" id="box-option-info-panel"></div>
+        </div>
+
+        <div class="check-item" id="item-option-hide-arrows">
+          <span class="check-label" data-i18n="hideArrows">HIDE ARROWS</span>
+          <div class="check-box off" id="box-option-hide-arrows"></div>
+        </div>
+
+        <div class="check-item" id="item-option-stream-mode">
+          <span class="check-label" data-i18n="streamMode">STREAM MODE</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipStreamMode">Arrows and analysis are shown in a separate popup window. Keep your board clean while streaming.</span></span>
+          <div class="check-box off" id="box-option-stream-mode"></div>
+        </div>
+
+        <div class="check-item" id="item-option-hide-players">
+          <span class="check-label" data-i18n="hidePlayers">HIDE PLAYERS</span>
+          <div class="check-box off" id="box-option-hide-players"></div>
+        </div>
+
+        <div class="check-item" id="item-option-mobile-play-btn">
+          <span class="check-label" data-i18n="mobilePlayBtn">MOBILE PLAY BUTTON</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipMobilePlayBtn">Shows a hold-to-play button on screen for touch devices</span></span>
+          <div class="check-box off" id="box-option-mobile-play-btn"></div>
+        </div>
+
+        <div class="check-item" id="item-option-mobile-premove-btn">
+          <span class="check-label" data-i18n="mobilePremoveBtn">MOBILE PREMOVE BUTTON</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipMobilePremoveBtn">Shows a premove button on screen for touch devices</span></span>
+          <div class="check-box off" id="box-option-mobile-premove-btn"></div>
+        </div>
+
+      </div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="fakeTitle">TITLE</span>
+        <div class="select-wrap">
+          <select class="options-select" id="option-fake-title">
+            <option value="none">None</option>
+            <option value="GM">GM</option>
+            <option value="IM">IM</option>
+            <option value="FM">FM</option>
+            <option value="WGM">WGM</option>
+            <option value="WIM">WIM</option>
+            <option value="WFM">WFM</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SETTINGS OVERLAY -->
+    <div class="color-overlay hidden" id="settings-overlay">
+      <div class="color-overlay-header">
+        <span class="color-overlay-title" data-i18n="settingsTitle">Settings</span>
+        <button class="overlay-close" id="btn-settings-overlay-close">&#x2715;</button>
+      </div>
+      <div class="settings-overlay-body">
+
+        <!-- LANGUAGE SECTION -->
+        <div class="settings-section-title" data-i18n="languageTitle">LANGUAGE</div>
+        <div class="settings-lang-list">
+          <select id="lang-select" class="lang-dropdown">
+            <option value="en">ENGLISH</option>
+            <option value="hi">हिन्दी</option>
+            <option value="tr">TÜRKÇE</option>
+            <option value="fr">FRANÇAIS</option>
+            <option value="ru">РУССКИЙ</option>
+            <option value="vi">TIẾNG VIỆT</option>
+            <option value="id">BAHASA INDONESIA</option>
+            <option value="ar">العربية</option>
+            <option value="es">ESPAÑOL</option>
+            <option value="pt">PORTUGUÊS</option>
+            <option value="tl">FILIPINO</option>
+          </select>
+        </div>
+
+        <div class="settings-section-sep"></div>
+
+        <!-- ARROW COLORS SECTION -->
+        <div class="settings-section-title" data-i18n="arrowColors">ARROW COLORS</div>
+        <div class="color-row">
+          <span class="color-label" data-i18n="bestMove">BEST MOVE</span>
+          <div class="color-swatch" id="swatch-best-arrow"></div>
+          <input type="color" id="option-color-best-arrow" value="#FF3333" style="display:none;">
+        </div>
+        <div class="color-row">
+          <span class="color-label" data-i18n="otherArrows">OTHER ARROWS</span>
+          <div class="color-swatch" id="swatch-other-arrow"></div>
+          <input type="color" id="option-color-other-arrow" value="#FECA57" style="display:none;">
+        </div>
+        <button class="reset-btn" id="btn-reset-colors" data-i18n="resetDefaults">RESET TO DEFAULTS</button>
+
+        <div class="settings-section-sep"></div>
+
+        <!-- THEME SECTION -->
+        <div class="settings-section-title" data-i18n="themeTitle">THEME</div>
+        <div class="settings-lang-list">
+          <select id="theme-select" class="lang-dropdown">
+            <option value="ashina-red">ASHINA RED</option>
+            <option value="chesscom-green">CHESSCOM GREEN</option>
+            <option value="pink">PINK</option>
+            <option value="yellow">YELLOW</option>
+          </select>
+        </div>
+
+        <div class="settings-section-sep"></div>
+
+        <!-- CONFIG BACKUP SECTION (Import / Export) -->
+        <div class="settings-section-title" data-i18n="backupTitle">CONFIG BACKUP</div>
+        <div class="backup-hint" data-i18n="backupHint">
+          Save and load your settings as JSON. Reload the page to apply imported settings.
+        </div>
+
+        <div class="backup-subtitle" data-i18n="exportSubtitle">EXPORT</div>
+        <textarea class="backup-textarea" id="backupExportOutput" readonly placeholder="..."></textarea>
+        <div class="backup-actions">
+          <button class="reset-btn" id="btnBackupExport" data-i18n="exportBtn">EXPORT CONFIG</button>
+          <button class="reset-btn" id="btnBackupDownload" data-i18n="downloadBtn">DOWNLOAD</button>
+          <button class="reset-btn" id="btnBackupCopy" data-i18n="copyBtn">COPY TO CLIPBOARD</button>
+        </div>
+
+        <div class="settings-section-sep"></div>
+
+        <div class="backup-subtitle" data-i18n="importSubtitle">IMPORT</div>
+        <textarea class="backup-textarea" id="backupImportInput" placeholder='{
+  "option-depth": 12,
+  "option-uci-elo": 3500,
+  "option-automove-enabled": true,
+  ...
+}'></textarea>
+        <div class="backup-actions">
+          <button class="reset-btn" id="btnBackupImport" data-i18n="loadBtn">LOAD CONFIG</button>
+        </div>
+        <span class="backup-feedback" id="backupFeedback"></span>
+
+      </div>
+    </div>
+
+
+    <div class="color-overlay hidden" id="info-overlay">
+      <div class="color-overlay-header">
+        <span class="color-overlay-title" data-i18n="infoTitle">INFO</span>
+        <button class="overlay-close" id="btn-info-overlay-close">&#x2715;</button>
+      </div>
+      <div class="info-overlay-body" id="info-overlay-body">
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="keyboardShortcuts">KEYBOARD SHORTCUTS</div>
+          <div class="info-shortcut-list">
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">V</span>
+              <span class="info-shortcut-desc" data-i18n="playBestMove">PLAY BEST MOVE</span>
+            </div>
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">B</span>
+              <span class="info-shortcut-desc" data-i18n="setPremove">SET PREMOVE</span>
+            </div>
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">C</span>
+              <span class="info-shortcut-desc" data-i18n="playCheckMove">PLAY CHECK MOVE</span>
+            </div>
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">M</span>
+              <span class="info-shortcut-desc" data-i18n="toggleAutoMove">AUTO MOVE ON/OFF</span>
+            </div>
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">R</span>
+              <span class="info-shortcut-desc" data-i18n="reloadEngine">RELOAD ENGINE</span>
+            </div>
+            <div class="info-shortcut-row">
+              <span class="info-shortcut-key">H</span>
+              <span class="info-shortcut-desc" data-i18n="hideArrows">HIDE ARROWS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="premoveInfoTitle">PREMOVE</div>
+          <div class="info-section-body" data-i18n="premoveInfoBody">Press B during opponent's turn to set a premove. Enable premove in chess.com Settings → Game → Premove before using.</div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="checkMoveInfoTitle">PLAY CHECK MOVE</div>
+          <div class="info-section-body" data-i18n="checkMoveInfoBody">Plays a checking move instantly if available. Operates independently of engine recommendations. Flags your opponent with surprise checks. Designed for UltraBullet games.</div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="flagModeInfoTitle">FLAG MODE</div>
+          <div class="info-section-body" data-i18n="flagModeInfoBody">When your clock drops below 10 or 5 seconds, auto move delay, personality and depth are adjusted internally to maximize flagging chances.</div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="centerWeightInfoTitle">CENTER WEIGHT</div>
+          <div class="info-section-body" data-i18n="centerWeightInfoBody">Controls how auto move delays are distributed within your min–max range. Higher values cluster timing toward the midpoint using a bell curve, making your moves feel more natural.</div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="personalitiesInfoTitle">DRAGON PERSONALITIES</div>
+          <div class="info-section-body" data-i18n="personalitiesInfoBody">Personalities other than Default will internally set parameters to reflect that playing style. To use the engine at maximum strength, set the personality to Default.</div>
+          <div class="info-section-body info-personality-body" data-i18n="personalitiesInfoBodyList">AGGRESSIVE: The Aggressive personality will attack relentlessly with no concern for their own safety. They prefer active pieces, and are biased toward playing with the Queen.
+DEFENSIVE: The Defensive personality emphasizes king safety and a solid position above all else.
+ACTIVE: The Active personality tends toward open positions and well-placed pieces.
+POSITIONAL: The Positional personality tends toward solid play, maneuvering, and more closed positions.
+ENDGAME: The Endgame personality prefers playing through to the end to win by promoting a pawn.
+BEGINNER: The Beginner personality doesn't understand the fundamentals of chess, especially endgame principles, and is mostly looking to check and capture.
+HUMAN: The Human personality plays aggressively, avoiding pointless simplification and repetition, aiming for open positions, and emphasizing static advantages.</div>
+        </div>
+
+        <div class="info-section">
+          <div class="info-section-title" data-i18n="rodentPersonalitiesInfoTitle">RODENT PERSONALITIES</div>
+          <div class="info-section-body info-personality-body" data-i18n="rodentPersonalitiesInfoBody">FISCHER: Attacking, contemptuous, raised mobility for both sides.
+ANAND: Fast player, slight preference for attack, cares for pawn structure.
+RETI: Disregards classical piece placement, solid pawn structure.
+BOTVINNIK: Balanced, cares for pawn structure, somewhat willing to accept doubled pawns.
+MARSHALL: Very high attack and mobility, sacrificial, favors knights.
+LARSEN: Tricky player, follows Nimzowitsch principles, plays varied and unusual openings.
+SPASSKY: Defensive player who likes grabbing space and cares for pawn structure.
+PETROSIAN: Defensive, prefers closed positions, likes sacrificing exchange.
+TARRASCH: Mobility-focused, emphasizes bishops, likes open games.
+NIMZOWITSCH: Hypermodern chess, preferred to control it from a distance with pieces.
+RUBINSTEIN: Classical player, marginally prefers defense, decreased mobility, favors rook play, steers towards endgame.
+ANDERSSEN: Aggressive, king-hunting attacks and spectacular piece sacrifices.
+STEINITZ: Defensive, accepts cramped positions and sacrifices, solid with pawns.
+KINGHUNTER: Mad attacker.
+TORTOISE: Slow defensive player who likes blocked positions.
+DRUNK: Huge random factor in evaluation.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ENGINE -->
+    <div class="page" id="page-engine">
+
+      <!-- ENGINE SOURCE -->
+      <div class="select-item">
+        <span class="select-label" data-i18n="engineSource">ENGINE</span>
+        <div class="select-wrap">
+          <select class="options-select" id="option-engine-source">
+            <option value="websocket">WebSocket</option>
+            <option value="komodo" selected>Dragon 3.3</option>
+            <option value="torch" disabled style="display:none;">Torch (Built-in)</option>
+            <option value="maia">Maia 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="websocket-options" style="display:none;">
+
+        <div class="sep"></div>
+
+        <div class="select-item">
+          <span class="select-label" data-i18n="rodentEngineLabel">ENGINE</span>
+          <div class="select-wrap">
+            <select class="options-select" id="option-url-api-stockfish">
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-default" selected>Rodent 3 - Default</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-fischer">Rodent 3 - Fischer</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-anand">Rodent 3 - Anand</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-reti">Rodent 3 - Reti</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-botvinnik">Rodent 3 - Botvinnik</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-marshall">Rodent 3 - Marshall</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-larsen">Rodent 3 - Larsen</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-spassky">Rodent 3 - Spassky</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-petrosian">Rodent 3 - Petrosian</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-tarrasch">Rodent 3 - Tarrasch</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-nimzowitsch">Rodent 3 - Nimzowitsch</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-rubinstein">Rodent 3 - Rubinstein</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-anderssen">Rodent 3 - Anderssen</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-steinitz">Rodent 3 - Steinitz</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-kinghunter">Rodent 3 - KingHunter</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-tortoise">Rodent 3 - Tortoise</option>
+              <option value="wss://ProtonnDev-engine.hf.space/rodent3-drunk">Rodent 3 - Drunk</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1100">Patricia 3 - 1100</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1200">Patricia 3 - 1200</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1300">Patricia 3 - 1300</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1400">Patricia 3 - 1400</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1500">Patricia 3 - 1500</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1600">Patricia 3 - 1600</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1700">Patricia 3 - 1700</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1800">Patricia 3 - 1800</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-1900">Patricia 3 - 1900</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2000">Patricia 3 - 2000</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2100">Patricia 3 - 2100</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2200">Patricia 3 - 2200</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2300">Patricia 3 - 2300</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2400">Patricia 3 - 2400</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2500">Patricia 3 - 2500</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2600">Patricia 3 - 2600</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2700">Patricia 3 - 2700</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2800">Patricia 3 - 2800</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-2900">Patricia 3 - 2900</option>
+              <option value="wss://ProtonnDev-engine.hf.space/patricia-3000">Patricia 3 - 3000</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="websocket-migration-notice" class="websocket-migration-notice" style="display:none;">
+          Önceki özel adresiniz artık desteklenmiyor, varsayılan motora geçildi.
+        </div>
+
+      </div><!-- #websocket-options -->
+
+      <div id="engine-common-options">
+
+      <div class="sep"></div>
+
+      <div class="slider-item">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="calcDepth">CALCULATION DEPTH</span>
+          <span class="slider-val" id="val-option-depth">12</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-depth" min="1" max="20" value="12">
+      </div>
+
+      <div class="slider-item">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="thinkingLines">THINKING LINES (MULTIPV)</span>
+          <span class="slider-val" id="val-option-multipv">3</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-multipv" min="1" max="5" value="3">
+      </div>
+
+      </div><!-- #engine-common-options -->
+
+      <div id="komodo-options">
+
+      <div class="sep"></div>
+
+      <div class="slider-item">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="predDepth">PREDICTION DEPTH</span>
+          <span class="slider-val" id="val-option-pred-depth">8</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-pred-depth" min="0" max="10" value="8">
+        <div class="slider-hint" data-i18n="requiresMultipv">Requires MultiPV: 1</div>
+      </div>
+
+      <div class="slider-item">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="engineElo">ENGINE ELO</span>
+          <span class="slider-val" id="val-option-uci-elo">3500</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-uci-elo" min="1" max="3500" value="3500">
+      </div>
+
+      <div class="slider-item">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="hashSize">HASH SIZE</span>
+          <span class="slider-val" id="val-option-hash">64 MB</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-hash" min="0" max="4" step="1" value="0">
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="personality">PERSONALITY</span>
+        <div class="select-wrap">
+          <select class="options-select" id="option-personality">
+            <option value="Default">Default</option>
+            <option value="Aggressive">Aggressive</option>
+            <option value="Defensive">Defensive</option>
+            <option value="Active">Active</option>
+            <option value="Positional">Positional</option>
+            <option value="Endgame">Endgame</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Human">Human</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="check-grid">
+
+        <div class="check-item" id="item-option-limit-strength">
+          <span class="check-label" data-i18n="limitStrength">LIMIT STRENGTH</span>
+          <div class="check-box off" id="box-option-limit-strength"></div>
+        </div>
+
+        <div class="check-item" id="item-option-auto-skill" title="Adjusts Skill level based on your opponent">
+          <span class="check-label" data-i18n="autoSkill">AUTO SKILL</span>
+          <div class="check-box off" id="box-option-auto-skill"></div>
+        </div>
+
+        <div class="check-item" id="item-option-own-book">
+          <span class="check-label" data-i18n="useBook">USE BOOK</span>
+          <div class="check-box" id="box-option-own-book">
+            <svg viewBox="0 0 10 10" width="10" height="10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="check-item" id="item-option-chess960">
+          <span class="check-label" data-i18n="chess960">CHESS 960</span>
+          <div class="check-box off" id="box-option-chess960"></div>
+        </div>
+
+        <div class="check-item" id="item-option-best-book-line">
+          <span class="check-label" data-i18n="bestBookLine">BEST BOOK LINE</span>
+          <div class="check-box off" id="box-option-best-book-line"></div>
+        </div>
+
+        <div class="check-item" id="item-option-limit-book-moves">
+          <span class="check-label" data-i18n="limitBookMoves">LIMIT BOOK MOVES</span>
+          <div class="check-box off" id="box-option-limit-book-moves"></div>
+        </div>
+
+      </div>
+
+      <div class="slider-item" id="book-moves-slider" style="display:none;">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="maxBookMoves">MAX BOOK MOVES</span>
+          <span class="slider-val" id="val-option-book-moves">5</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-book-moves" min="1" max="11" value="5">
+      </div>
+
+      <div class="sep"></div>
+
+      </div><!-- #komodo-options -->
+
+      <div id="maia-options" style="display:none;">
+
+        <div class="sep"></div>
+
+        <div class="select-item">
+          <span class="select-label">MAIA ELO</span>
+          <div class="select-wrap">
+            <select class="options-select" id="option-maia-elo">
+              <option value="600">600</option>
+              <option value="700">700</option>
+              <option value="800">800</option>
+              <option value="900">900</option>
+              <option value="1000">1000</option>
+              <option value="1100">1100</option>
+              <option value="1200">1200</option>
+              <option value="1300">1300</option>
+              <option value="1400">1400</option>
+              <option value="1500" selected>1500</option>
+              <option value="1600">1600</option>
+              <option value="1700">1700</option>
+              <option value="1800">1800</option>
+              <option value="1900">1900</option>
+              <option value="2000">2000</option>
+              <option value="2100">2100</option>
+              <option value="2200">2200</option>
+              <option value="2300">2300</option>
+              <option value="2400">2400</option>
+              <option value="2500">2500</option>
+              <option value="2600">2600</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+      </div><!-- #maia-options -->
+
+      <div class="options-title" data-i18n="openingPreferenceTitle">OPENING PREFERENCE</div>
+
+      <div class="options-title" data-i18n="openingWhiteTitle">WHITE</div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="openingPriority1">1ST PRIORITY</span>
+        <div class="select-wrap">
+          <select class="options-select" id="opening-white-1">
+            <option value="none">NONE</option>
+            <option value="center">Center Game (e4)</option>
+            <option value="english">English (c4)</option>
+            <option value="larsen">Nimzo-Larsen (b3)</option>
+            <option value="reti">Reti Opening (Nf3)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="openingPriority2">2ND PRIORITY</span>
+        <div class="select-wrap">
+          <select class="options-select" id="opening-white-2">
+            <option value="none">NONE</option>
+            <option value="center">Center Game (e4)</option>
+            <option value="english">English (c4)</option>
+            <option value="larsen">Nimzo-Larsen (b3)</option>
+            <option value="reti">Reti Opening (Nf3)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="options-title" data-i18n="openingBlackTitle">BLACK</div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="openingPriority1">1ST PRIORITY</span>
+        <div class="select-wrap">
+          <select class="options-select" id="opening-black-1">
+            <option value="none">NONE</option>
+            <option value="modern">Modern Defense (g6)</option>
+            <option value="caro">Caro-Kann (c6)</option>
+            <option value="scandinavian">Scandinavian (d5)</option>
+            <option value="sicilian">Sicilian (c5)</option>
+            <option value="pirc">Pirc Defense (d6)</option>
+            <option value="french">French Defense (e6)</option>
+            <option value="indian">Indian (g6)</option>
+            <option value="englund">Englund Gambit (e5)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="select-item">
+        <span class="select-label" data-i18n="openingPriority2">2ND PRIORITY</span>
+        <div class="select-wrap">
+          <select class="options-select" id="opening-black-2">
+            <option value="none">NONE</option>
+            <option value="modern">Modern Defense (g6)</option>
+            <option value="caro">Caro-Kann (c6)</option>
+            <option value="scandinavian">Scandinavian (d5)</option>
+            <option value="sicilian">Sicilian (c5)</option>
+            <option value="pirc">Pirc Defense (d6)</option>
+            <option value="french">French Defense (e6)</option>
+            <option value="indian">Indian (g6)</option>
+            <option value="englund">Englund Gambit (e5)</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COACH -->
+    <div class="page" id="page-coach">
+
+      <!-- Ana switch: Coach Enabled -->
+      <div class="coach-master-toggle">
+        <div class="check-item coach-master-item" id="item-option-coach-enabled">
+          <span class="check-label coach-master-label" data-i18n="coachEnabled">LIVE ANALYZE</span>
+          <div class="check-box" id="box-option-coach-enabled"></div>
+        </div>
+      </div>
+
+      <!-- Ana switch: Pre-Analyze Enabled -->
+      <div class="coach-master-toggle" style="margin-top:6px;">
+        <div class="check-item coach-master-item" id="item-option-pre-analyze-enabled">
+          <span class="check-label coach-master-label" data-i18n="preAnalyzeEnabled">PRE ANALYZE</span>
+          <div class="check-box off" id="box-option-pre-analyze-enabled">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <!-- Toggle: Move Feedback -->
+      <div class="check-grid" id="coach-sub-options">
+        <div class="check-item" id="item-option-coach-move-feedback">
+          <span class="check-label" data-i18n="coachMoveFeedback">MOVE FEEDBACK</span>
+          <div class="check-box" id="box-option-coach-move-feedback">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Toggle: Accuracy Widget -->
+        <div class="check-item" id="item-option-coach-accuracy">
+          <span class="check-label" data-i18n="coachAccuracy">LIVE ACCURACY</span>
+          <div class="check-box" id="box-option-coach-accuracy">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Toggle: Tallies Widget -->
+        <div class="check-item" id="item-option-coach-recap">
+          <span class="check-label" data-i18n="talliesWidget">TALLIES</span>
+          <div class="check-box" id="box-option-coach-recap">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider: Coach Depth -->
+      <div class="slider-item" id="coach-depth-slider">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="coachDepth">ANALYZE DEPTH</span>
+          <span class="slider-val" id="val-option-coach-depth">10</span>
+        </div>
+        <input type="range" class="custom-slider" id="option-coach-depth"
+          min="1" max="20" value="10">
+      </div>
+
+      <!-- Toggle: Coach Voice (ses açık/kapalı) -->
+      <div class="check-grid">
+        <div class="check-item" id="item-option-coach-voice-enabled">
+          <span class="check-label" data-i18n="coachVoice">COACH VOICE</span>
+          <div class="check-box" id="box-option-coach-voice-enabled">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Select: Coach Voice -->
+      <div class="slider-item" id="coach-voice-selector">
+        <div class="slider-header">
+          <span class="slider-label">COACH</span>
+        </div>
+        <select id="option-coach-voice" class="custom-select" style="width:100%;margin-top:6px;background:var(--bg2,#2b2b2b);color:var(--text,#eee);border:1px solid var(--border,#444);border-radius:6px;padding:5px 8px;font-size:12px;">
+          <optgroup label="COACHES">
+            <option value="david">David</option>
+            <option value="mae">Mae</option>
+            <option value="dante">Dante</option>
+            <option value="nadia">Nadia</option>
+            <option value="sloane">Sloane</option>
+            <option value="drwolf">Dr. Wolf</option>
+          </optgroup>
+          <optgroup label="CELEBRITIES">
+            <option value="magnus">GM Magnus Carlsen</option>
+            <option value="hikaru">GM Hikaru Nakamura</option>
+            <option value="vishy">GM Vishy Anand</option>
+            <option value="judit">GM Judit Polgar</option>
+            <option value="botez">Botez Sisters</option>
+            <option value="anna">Anna</option>
+            <option value="levy">Levy</option>
+            <option value="ben">Ben</option>
+            <option value="canty">Canty</option>
+            <option value="calvin">Calvin</option>
+            <option value="ruben">Ruben</option>
+            <option value="tania">Tania</option>
+            <option value="danny">Danny</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- ADIM 6: Coach Language dropdown — Coach Voice'un hemen altına, ayrı -->
+      <div class="slider-item" id="coach-locale-selector">
+        <div class="slider-header">
+          <span class="slider-label" data-i18n="coachLanguage">COACH LANGUAGE</span>
+        </div>
+        <select id="option-coach-locale" class="custom-select" style="width:100%;margin-top:6px;background:var(--bg2,#2b2b2b);color:var(--text,#eee);border:1px solid var(--border,#444);border-radius:6px;padding:5px 8px;font-size:12px;">
+          <option value="en-US">English</option>
+          <option value="fr-FR">Français</option>
+          <option value="es-ES">Español</option>
+          <option value="de-DE">Deutsch</option>
+          <option value="it-IT">Italiano</option>
+          <option value="pt-PT">Português</option>
+          <option value="tr-TR">Türkçe</option>
+          <option value="ru-RU">Русский</option>
+          <option value="ar-SA">العربية</option>
+          <option value="pl-PL">Polski</option>
+          <option value="ko-KR">한국어</option>
+          <option value="id-ID">Bahasa Indonesia</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- AUTOMOVE -->
+    <div class="page" id="page-automove">
+
+      <!-- ── MOVE METHOD — Sayfa en üstü ─────────────────────────── -->
+      <div class="move-method-bar">
+        <span class="move-method-label">MOVE METHOD</span>
+        <div class="move-method-pills" id="move-method-pills">
+          <div class="move-method-pill active" data-value="teleport">TELEPORT</div>
+          <div class="move-method-pill" data-value="clicksim">CLICK SIM</div>
+        </div>
+      </div>
+      <div class="sep"></div>
+      <!-- ──────────────────────────────────────────────────────────── -->
+
+      <!-- Master Toggle: AutoMove Enabled -->
+      <div class="coach-master-toggle">
+        <div class="check-item coach-master-item" id="item-option-automove-enabled">
+          <span class="check-label coach-master-label" data-i18n="autoMoveEnabled">AUTO MOVE</span>
+          <div class="check-box off" id="box-option-automove-enabled"></div>
+        </div>
+      </div>
+
+      <div id="automove-sub-options">
+
+        <div class="sep"></div>
+
+        <!-- Auto Start New Game -->
+        <div class="check-item" id="item-option-autostart-newgame">
+          <span class="check-label" data-i18n="autoStartNewGame">AUTO START NEW GAME</span>
+          <div class="check-box off" id="box-option-autostart-newgame"></div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Dual Slider: Move Timing -->
+        <div class="slider-item" id="automove-timing-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="autoMoveTiming">MOVE TIMING</span>
+            <span class="slider-val" id="val-option-automove-timing">0.0s – 1.5s</span>
+          </div>
+          <div class="dual-slider-wrapper">
+            <div class="dual-slider-track" id="dual-slider-track"></div>
+            <input type="range" class="custom-slider dual-slider" id="option-automove-min"
+              min="0" max="10000" step="100" value="0">
+            <input type="range" class="custom-slider dual-slider" id="option-automove-max"
+              min="0" max="10000" step="100" value="1500">
+          </div>
+          <div class="dual-slider-labels">
+            <span data-i18n="autoMoveTimingMin">MIN</span>
+            <span data-i18n="autoMoveTimingMax">MAX</span>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Center Weight Slider -->
+        <div class="slider-item" id="automove-centerweight-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="centerWeight">CENTER WEIGHT</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipCenterWeight">Clusters move timing around the middle of the delay range using a bell curve</span></span>
+            <span class="slider-val" id="val-option-automove-centerweight">MEDIUM</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-automove-centerweight"
+            min="1" max="5" step="1" value="3">
+          <div class="dual-slider-labels">
+            <span data-i18n="centerWeightUniform">UNIFORM</span>
+            <span data-i18n="centerWeightMax">MAX CENTER</span>
+          </div>
+          <div class="mini-hist-wrap">
+            <div class="mini-hist" id="automove-mini-hist"></div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- SMART TIMING GROUP -->
+        <div class="smart-timing-group" id="smart-timing-section">
+          <div class="smart-timing-header">
+            <div class="smart-timing-title" data-i18n="smartTiming">SMART TIMING</div>
+            <select id="select-smart-timing-profile" class="smart-timing-profile-select">
+              <option value="bullet">Bullet</option>
+              <option value="blitz">Blitz</option>
+            </select>
+          </div>
+
+          <div class="check-item" id="item-option-fast-simple-moves">
+            <span class="check-label" data-i18n="fastSimpleMoves">FAST SIMPLE MOVES</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipFastSimpleMoves">Plays simple moves faster: book moves, promotion, castling etc</span></span>
+            <div class="check-box off" id="box-option-fast-simple-moves"></div>
+          </div>
+
+          <div class="check-item" id="item-option-simulate-checkmates">
+            <span class="check-label" data-i18n="simulateMates">SIMULATE MATES</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipSimulateCheckmates">Simulates thinking when a forced mate is found, then plays the remaining moves quickly</span></span>
+            <div class="check-box off" id="box-option-simulate-checkmates"></div>
+          </div>
+
+          <div class="check-item" id="item-option-blunder-react">
+            <span class="check-label" data-i18n="blunderReact">BLUNDER REACT</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipBlunderReact">Thinks more when your opponent blunders</span></span>
+            <div class="check-box off" id="box-option-blunder-react"></div>
+          </div>
+
+          <div class="check-item" id="item-option-flag-mode-enabled">
+            <span class="check-label" data-i18n="flagModeEnabled">FLAG MODE</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipFlagMode">Gets faster as time runs low but weaker</span></span>
+            <div class="check-box off" id="box-option-flag-mode-enabled"></div>
+          </div>
+
+          <div class="check-item" id="item-option-instant-recapture">
+            <span class="check-label" data-i18n="instantRecapture">INSTANT RECAPTURE</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipInstantRecapture">Instantly recaptures simple moves but avoids bad sacrifices</span></span>
+            <div class="check-box off" id="box-option-instant-recapture"></div>
+          </div>
+
+        </div><!-- /smart-timing-group -->
+
+        <div class="sep"></div>
+
+        <!-- PREMOVE GROUP -->
+        <div class="smart-timing-group" id="premove-section">
+          <div class="smart-timing-title" data-i18n="premoveSectionTitle">PREMOVE</div>
+
+          <div class="check-item coach-master-item" id="item-option-premove-enabled">
+            <span class="check-label coach-master-label" data-i18n="premoveEnabled">PREMOVE (B)</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipPremove">Press B to queue ponder move as premove</span></span>
+            <div class="check-box off" id="box-option-premove-enabled"></div>
+          </div>
+
+          <div id="premove-sub-options">
+
+            <div class="check-item" id="item-option-autopremove-enabled">
+              <span class="check-label" data-i18n="autoPremoveEnabled">AUTO-PREMOVE FOR TRADES</span>
+              <div class="check-box off" id="box-option-autopremove-enabled"></div>
+            </div>
+
+            <div class="check-item" id="item-option-autopremove-mates-enabled">
+              <span class="check-label" data-i18n="autoPremoveMatesEnabled">AUTO-PREMOVE FOR MATE IN 1</span>
+              <div class="check-box off" id="box-option-autopremove-mates-enabled"></div>
+            </div>
+
+            <div class="check-item" id="item-option-autopremove-checking-fork-enabled">
+              <span class="check-label" data-i18n="autoPremoveCheckingForkEnabled">AUTO-PREMOVE AFTER CHECKING FORK</span>
+              <div class="check-box off" id="box-option-autopremove-checking-fork-enabled"></div>
+            </div>
+
+          </div>
+
+        </div><!-- /premove-group -->
+
+      </div><!-- /automove-sub-options -->
+
+      <!-- Check Move Toggle -->
+      <div class="check-item" id="item-option-checkmove-enabled">
+        <span class="check-label" data-i18n="checkMoveEnabled">PLAY CHECK MOVE (C)</span>
+        <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipCheckMove">Press C to play the first legal move that gives check</span></span>
+        <div class="check-box off" id="box-option-checkmove-enabled"></div>
+      </div>
+
+      <div class="sep"></div>
+
+      <!-- ── ULTRABULLET MOD — bağımsız, automove-sub-options'a bağımlı değil ── -->
+      <!-- Master Toggle: Ultrabullet Mod Enabled -->
+      <div class="coach-master-toggle">
+        <div class="check-item coach-master-item" id="item-option-ultrabullet-enabled">
+          <span class="check-label coach-master-label">ULTRABULLET MOD</span>
+          <div class="check-box off" id="box-option-ultrabullet-enabled"></div>
+        </div>
+      </div>
+
+      <div id="ultrabullet-sub-options">
+
+        <div class="sep"></div>
+
+        <!-- Dual Slider: Ultrabullet Move Timing (0.0s - 1.5s) -->
+        <div class="slider-item" id="ultrabullet-timing-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletMoveTiming">MOVE TIMING</span>
+            <span class="slider-val" id="val-option-ultrabullet-timing">0.0s – 1.5s</span>
+          </div>
+          <div class="dual-slider-wrapper">
+            <div class="dual-slider-track" id="ultrabullet-dual-slider-track"></div>
+            <input type="range" class="custom-slider dual-slider" id="option-ultrabullet-min"
+              min="0" max="2000" step="100" value="0">
+            <input type="range" class="custom-slider dual-slider" id="option-ultrabullet-max"
+              min="0" max="2000" step="100" value="1500">
+          </div>
+          <div class="dual-slider-labels">
+            <span>MIN</span>
+            <span>MAX</span>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Auto Premove Chance -->
+        <div class="slider-item" id="ultrabullet-premove-chance-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletAutoPremoveChance">PREMOVE CHANCE</span>
+            <span class="slider-val" id="val-option-ultrabullet-premove-chance">50%</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-premove-chance"
+            min="0" max="100" step="5" value="50">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Premove Chain Limit -->
+        <div class="slider-item" id="ultrabullet-premove-chain-limit-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletPremoveChainLimit">PREMOVE STREAK LIMIT</span>
+            <span class="slider-val" id="val-option-ultrabullet-premove-chain-limit">3</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-premove-chain-limit"
+            min="1" max="5" step="1" value="3">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Checkmove Chance -->
+        <div class="slider-item" id="ultrabullet-checkmove-chance-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletCheckmoveChance">CHECKMOVE CHANCE</span>
+            <span class="slider-val" id="val-option-ultrabullet-checkmove-chance">50%</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-checkmove-chance"
+            min="0" max="100" step="5" value="50">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Lefong Trap Chance -->
+        <div class="slider-item" id="item-option-ultrabullet-lefong-trap-chance">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletLefongTrapChance">LEFONGS CHANCE</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipLefongTrapChance">Attacks a valuable opponent piece with an undefended piece. High risk high reward.</span></span>
+            <span class="slider-val" id="val-option-ultrabullet-lefong-trap-chance">20%</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-lefong-trap-chance"
+            min="0" max="100" step="5" value="20">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Overlook Blunders (eski adı: Ignore Captures) -->
+        <div class="slider-item" id="ultrabullet-ignore-captures-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletOverlookBlunders">OVERLOOK BLUNDERS CHANCE</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipOverlookBlunders">Ignores unexpected hanging pieces to simulate overlooking free captures under time pressure.</span></span>
+            <span class="slider-val" id="val-option-ultrabullet-ignore-captures">50%</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-ignore-captures"
+            min="0" max="100" step="5" value="50">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Ignore Recapture -->
+        <div class="slider-item" id="ultrabullet-ignore-recapture-slider">
+          <div class="slider-header">
+            <span class="slider-label" data-i18n="ultrabulletIgnoreRecapture">IGNORE RECAPTURE CHANCE</span>
+            <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipIgnoreRecapture">Ignores recaptures to simulate missing opponent's threats.</span></span>
+            <span class="slider-val" id="val-option-ultrabullet-ignore-recapture">50%</span>
+          </div>
+          <input type="range" class="custom-slider" id="option-ultrabullet-ignore-recapture"
+            min="0" max="100" step="5" value="50">
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Flag Mode (toggle, default ON, i18n YOK, tooltip YOK — kasıtlı) -->
+        <div class="check-item" id="item-option-ultrabullet-flag-mode-enabled">
+          <span class="check-label">FLAG MODE</span>
+          <div class="check-box" id="box-option-ultrabullet-flag-mode-enabled"></div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- React To Check (toggle, default ON) -->
+        <div class="check-item" id="item-option-ultrabullet-react-to-check">
+          <span class="check-label" data-i18n="ultrabulletReactToCheck">REACT TO CHECK</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipReactToCheck">Responds with humanlike timing when you're in check.</span></span>
+          <div class="check-box" id="box-option-ultrabullet-react-to-check"></div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Follow Through Attack (toggle, default ON) -->
+        <div class="check-item" id="item-option-ultrabullet-follow-through-attack">
+          <span class="check-label" data-i18n="ultrabulletFollowThroughAttack">FOLLOW THROUGH ATTACK</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipFollowThroughAttack">The piece that started the attack will keep attacking if it has the opportunity.</span></span>
+          <div class="check-box" id="box-option-ultrabullet-follow-through-attack"></div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Guard Queen (toggle, default OFF) -->
+        <div class="check-item" id="item-option-ultrabullet-guard-queen">
+          <span class="check-label" data-i18n="ultrabulletGuardQueen">GUARD QUEEN</span>
+          <span class="info-btn">i<span class="info-tooltip" data-i18n-tip="tipGuardQueen">Prefers safer queen moves, avoiding queen sacrifices and queen premoves.</span></span>
+          <div class="check-box off" id="box-option-ultrabullet-guard-queen"></div>
+        </div>
+
+        <div class="sep"></div>
+
+        <!-- Opening Preference (Ultrabullet-specific, hardcoded lines, color-agnostic dropdown) -->
+        <div class="select-item">
+          <span class="select-label" data-i18n="ultrabulletOpeningPrefTitle">OPENING PREFERENCE</span>
+          <div class="select-wrap">
+            <select class="options-select" id="option-ultrabullet-opening-preference">
+              <option value="none">NONE</option>
+              <option value="knight-sac" data-i18n-opt="ultrabulletOpeningKnightSac">Knight Sacrifice</option>
+              <option value="scholars-mate" data-i18n-opt="ultrabulletOpeningScholarsMate">Scholar's Mate</option>
+              <option value="bishop-sac" data-i18n-opt="ultrabulletOpeningAttackQueen">Attack The Queen</option>
+            </select>
+          </div>
+        </div>
+
+      </div><!-- /ultrabullet-sub-options -->
+      <!-- ──────────────────────────────────────────────────────────────────── -->
+
+    </div>
+
+  </div>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/themes.js"></script>
+  <script src="../js/options.js"></script>
+</body>
+</html>

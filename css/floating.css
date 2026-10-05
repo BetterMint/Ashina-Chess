@@ -1,0 +1,186 @@
+#asina-floating-panel {
+  position: fixed;
+  top: 80px;
+  right: 16px;
+  z-index: 99999;
+  width: 180px;
+  background: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  user-select: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.8);
+  overflow: hidden;
+}
+
+#asina-floating-panel .afp-header {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#asina-floating-panel .afp-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+#asina-floating-panel .afp-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--theme-accent, #ff0a2f);
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px var(--theme-accent, #ff0a2f), 0 0 12px var(--theme-accent, #ff0a2f), 0 0 28px var(--theme-accent-dark, #cc0820);
+}
+
+#asina-floating-panel .afp-sub {
+  font-size: 8px;
+  color: #333;
+  letter-spacing: 1.5px;
+  margin-top: 1px;
+}
+
+#asina-floating-panel .afp-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 10px 10px 12px;
+}
+
+#asina-floating-panel .afp-stat {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+}
+
+#asina-floating-panel .afp-stat-label {
+  font-size: 8px;
+  color: #444;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#asina-floating-panel .afp-stat-val {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+#asina-floating-panel .afp-stat-val.afp-positive {
+  color: #00ff6a;
+}
+
+#asina-floating-panel .afp-stat-val.afp-negative {
+  color: #ff0a2f;
+}
+
+#asina-floating-panel .afp-stat-val.afp-neutral {
+  color: #777;
+}
+
+#asina-floating-panel .afp-personality {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--theme-accent, #ff0a2f);
+  text-transform: uppercase;
+  padding: 0 10px 12px;
+}
+
+/* ── AutoMove Toast ── */
+#afp-automove-toast {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 10px;
+  opacity: 0;
+  transition: max-height 0.2s ease, padding 0.2s ease, opacity 0.2s ease;
+  pointer-events: none;
+}
+
+#afp-automove-toast.afp-toast-on  { color: #00ff6a; }
+#afp-automove-toast.afp-toast-off { color: #ff0a2f; }
+
+#afp-automove-toast.afp-toast-visible {
+  max-height: 30px;
+  padding: 5px 10px 8px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #afp-automove-toast { font-size: 8px; padding: 0 7px; }
+  #afp-automove-toast.afp-toast-visible { padding: 4px 7px 7px; max-height: 26px; }
+}
+
+#afp-reload-btn {
+  background: none;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s;
+  line-height: 0;
+}
+
+#afp-reload-btn:hover { color: var(--theme-accent, #ff0a2f); }
+
+@keyframes afp-spin-once {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+#afp-reload-btn.afp-spinning svg {
+  animation: afp-spin-once 0.6s ease-out;
+}
+
+/* ── Mobil: Info panel küçültme (desktop'a dokunulmaz) ── */
+@media (max-width: 768px) {
+  #asina-floating-panel {
+    width: 130px;
+    top: 50px;
+    right: 6px;
+    border-radius: 9px;
+  }
+  #asina-floating-panel .afp-header {
+    padding: 7px 8px 6px;
+  }
+  #asina-floating-panel .afp-name {
+    font-size: 10px;
+  }
+  #asina-floating-panel .afp-sub {
+    font-size: 7px;
+  }
+  #asina-floating-panel .afp-stats {
+    gap: 4px;
+    padding: 7px 7px 9px;
+  }
+  #asina-floating-panel .afp-stat {
+    padding: 6px 4px;
+    border-radius: 6px;
+  }
+  #asina-floating-panel .afp-stat-label {
+    font-size: 7px;
+    margin-bottom: 3px;
+  }
+  #asina-floating-panel .afp-stat-val {
+    font-size: 13px;
+  }
+  #asina-floating-panel .afp-personality {
+    font-size: 9px;
+    padding: 0 7px 9px;
+  }
+}
+

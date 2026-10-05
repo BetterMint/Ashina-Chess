@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASHINA — Stream View</title>
+  <link rel="stylesheet" href="../css/stream.css" />
+</head>
+<body>
+
+  <div id="stream-header">
+    <div class="dot"></div>
+    <span>ASHINA STREAM VIEW</span>
+    <span style="margin-left:auto" id="header-depth">depth —</span>
+  </div>
+
+  <div id="stream-main">
+
+    <!-- Eval bar -->
+    <div id="eval-bar-wrap">
+      <div id="eval-bar">
+        <div id="eval-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Board + depth bar -->
+    <div id="board-wrap">
+      <div id="stream-board">
+        <canvas id="board-canvas"></canvas>
+      </div>
+      <div id="depth-bar-wrap">
+        <div id="depth-bar-fill"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="stream-info">
+    cp: <span id="info-cp">—</span> &nbsp;|&nbsp;
+    depth: <span id="info-depth">—</span> &nbsp;|&nbsp;
+    moves: <span id="info-moves">—</span>
+  </div>
+
+  <script src="../js/themes.js"></script>
+  <script src="../js/stream.js"></script>
+</body>
+</html>

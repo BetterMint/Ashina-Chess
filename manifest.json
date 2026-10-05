@@ -1,0 +1,126 @@
+{
+    "manifest_version": 3,
+    "name": "ASHINA",
+    "short_name": "ASHINA",
+    "icons": {
+        "16": "img/logo-16.png",
+        "48": "img/logo-48.png",
+        "128": "img/logo-128.png"
+    },
+    "version": "6.0",
+    "description": "",
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "permissions": [
+        "storage",
+        "declarativeNetRequest",
+        "alarms",
+        "windows",
+        "tabs",
+        "debugger",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://*.chess.com/*",
+        "https://*.chess.com/*",
+        "https://lichess.org/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "js/themes.js",
+                "js/loader.js"
+            ],
+            "css": [
+                "css/depthbar.css",
+                "css/evalbar.css",
+                "css/material-icon.css"
+            ],
+            "matches": [
+                "https://*.chess.com/*"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "js": [
+                "js/i18n.js",
+                "js/floating.js"
+            ],
+            "css": [
+                "css/floating.css"
+            ],
+            "matches": [
+                "https://*.chess.com/*"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "js": [
+                "js/i18n.js",
+                "js/themes.js",
+                "js/floating.js",
+                "js/lichess-loader.js"
+            ],
+            "css": [
+                "css/floating.css"
+            ],
+            "matches": [
+                "https://lichess.org/*"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "action": {
+        "default_popup": "html/options.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "js/Ashina.js",
+                "js/chess-lib.js",
+                "js/lichess.js",
+                "html/options.html",
+                "html/stream.html",
+                "js/stream.js",
+                "css/stream.css",
+                "js/komodo.js",
+                "lib/komodo.wasm",
+                "js/torch.js",
+                "lib/torch.wasm",
+                "js/stockfish-18-single.js",
+                "lib/stockfish-18-lite-single.wasm",
+                "book/book.bin",
+                "book/eco.json",
+                "engine/maia3/maia3-23m_fp32.onnx",
+                "engine/maia3/all_moves.json",
+                "engine/maia3/all_moves_reversed.json",
+                "engine/maia3/maia3-tokenizer.js",
+                "engine/maia3/maia3-worker.js",
+                "engine/maia3/maia3-engine.js",
+                "engine/maia3/ort/ort.min.js",
+                "engine/maia3/ort/ort.wasm.min.js",
+                "engine/maia3/ort/ort-wasm-simd-threaded.wasm",
+                "engine/maia3/ort/ort-wasm-simd-threaded.mjs"
+            ],
+            "matches": [
+                "https://*.chess.com/*",
+                "https://lichess.org/*",
+                "chrome-extension://*/*"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';",
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    }
+}
