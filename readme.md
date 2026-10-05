@@ -4,7 +4,7 @@
 
 This is the **fully deobfuscated source** of Ashina V6. Every file was recovered from an obfuscated single-line bundle: all identifiers renamed to readable names, every function documented, and the code split into focused modules with a real build system.
 
-> **Upstream notice:** Ashina is a derivative of **BetterMint V2** (https://github.com/BetterMint/BetterMint) by the BetterMint team, with additional ideas adapted from ChessKiller (IMTUIZZ) and ChessHv3 (Red-Eric). The original author's note is preserved verbatim at the bottom of this file. BetterMint is distributed under the **Reciprocal Public License 1.5 (RPL 1.5)** — see [`LICENSE`](LICENSE). This derivative is accordingly licensed under RPL 1.5, which requires notices, attribution, and source availability when deployed.
+> **Upstream notice:** Ashina is a derivative of **BetterMint V2** (https://github.com/BetterMint/BetterMint-Chess) by the BetterMint team, with additional ideas adapted from ChessKiller (IMTUIZZ) and ChessHv3 (Red-Eric). The original author's note is preserved verbatim at the bottom of this file. BetterMint is distributed under the **Reciprocal Public License 1.5 (RPL 1.5)** — see [`LICENSE`](LICENSE). This derivative is accordingly licensed under RPL 1.5, which requires notices, attribution, and source availability when deployed.
 
 ## Quick start
 
@@ -89,5 +89,5 @@ Runtime behavior was not re-verified in a browser during deobfuscation - test ma
 >
 > This is probably the final release. Enjoy
 >
-> BetterMint:  https://github.com/BetterMint/BetterMint
+> BetterMint:  https://github.com/BetterMint/BetterMint-Chess
 > ChessHv3:    https://github.com/Red-Eric/ChessHv3
